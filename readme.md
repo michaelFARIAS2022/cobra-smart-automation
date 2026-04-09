@@ -1,6 +1,6 @@
 # 🚀 CobraSmart
 
-## Sistema de automatización con Google Apps Script
+## Generador de Borradores con Google Apps Script
 
 Sistema de automatización desarrollado por **Michael Farias** para generar borradores de Gmail a partir de datos en Google Sheets, optimizando procesos de gestión y contacto.
 
@@ -8,7 +8,7 @@ Sistema de automatización desarrollado por **Michael Farias** para generar borr
 
 ## 📌 Descripción
 
-**CobraSmart** es una solución diseñada para transformar procesos manuales en flujos automatizados utilizando herramientas de Google.
+**CobraSmart** es una solución diseñada para transformar procesos manuales en flujos automatizados utilizando herramientas del ecosistema Google.
 
 Fue desarrollado e implementado en un entorno laboral real, permitiendo mejorar la eficiencia operativa sin necesidad de infraestructura adicional.
 
@@ -92,7 +92,7 @@ Representa mi primera solución aplicada en producción, con impacto directo en 
 ## 🗂️ Estructura del proyecto
 
 ```text
-cobra-smart-apps-script/
+cobra-smart-automation/
 ├── src/
 │   └── Code.js
 ├── ui/

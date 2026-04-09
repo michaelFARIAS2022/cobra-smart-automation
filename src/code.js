@@ -1,8 +1,3 @@
-/***************************************
- * CENTRAL WEB APP - BORRADORES GMAIL
- * Ejecutar como: USUARIO QUE ACCEDE A LA APP WEB
- *************************************/
-
 const CONFIG = {
   APP_NAME: "Generador Central de Borradores",
 
