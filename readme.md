@@ -91,7 +91,7 @@ Representa mi primera solución aplicada en producción, con impacto directo en 
 
 ## 🗂️ Estructura del proyecto
 
-```text
+
 cobra-smart-automation/
 ├── src/
 │   └── Code.js
@@ -105,4 +105,4 @@ cobra-smart-automation/
 │       ├── webapp.png
 │       └── gmail.png
 └── README.md
-```
+
