@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <base target="_top" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 24px;
+        color: #222;
+      }
+      .card {
+        max-width: 680px;
+        margin: 0 auto;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 24px;
+      }
+      .title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .muted {
+        color: #666;
+        margin-bottom: 18px;
+        word-break: break-all;
+      }
+      .status {
+        padding: 12px;
+        border-radius: 8px;
+        margin-top: 16px;
+        white-space: pre-wrap;
+      }
+      .loading {
+        background: #f7f7f7;
+      }
+      .ok {
+        background: #eaf7ea;
+      }
+      .error {
+        background: #fdeaea;
+      }
+      button {
+        background: #1a73e8;
+        color: white;
+        border: 0;
+        border-radius: 8px;
+        padding: 12px 18px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+      }
+      code {
+        background: #f3f3f3;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="title"><?= appName ?></div>
+      <div class="muted">
+        Planilla: <code><?= spreadsheetId ?></code>
+      </div>
+
+      <button id="runBtn" onclick="runNow()">Generar borradores</button>
+      <div id="result" class="status loading" style="display: none">
+        Procesando...
+      </div>
+    </div>
+
+    <script>
+      function setResult(text, cls) {
+        const el = document.getElementById("result");
+        el.style.display = "block";
+        el.className = "status " + cls;
+        el.textContent = text;
+      }
+
+      function runNow() {
+        const sid = "<?= spreadsheetId ?>";
+        const btn = document.getElementById("runBtn");
+
+        btn.disabled = true;
+        setResult(
+          "Procesando. No cierres esta ventana hasta ver el resultado.",
+          "loading",
+        );
+
+        google.script.run
+          .withSuccessHandler(function (res) {
+            btn.disabled = false;
+
+            if (res && res.ok) {
+              setResult(
+                res.message +
+                  "\\nErrores: " +
+                  res.errors +
+                  "\\nSin correo: " +
+                  res.noEmail,
+                "ok",
+              );
+            } else {
+              setResult(
+                res && res.message
+                  ? res.message
+                  : "No se pudo completar la ejecución.",
+                "error",
+              );
+            }
+          })
+          .withFailureHandler(function (err) {
+            btn.disabled = false;
+            setResult(
+              "Error: " + (err && err.message ? err.message : err),
+              "error",
+            );
+          })
+          .runRemoteDraftJob(sid, "<?= sheetGid ?>");
+      }
+    </script>
+  </body>
+</html>
