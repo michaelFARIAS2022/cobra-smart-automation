@@ -5,7 +5,7 @@ Sistema de automatización desarrollado por **Michael Farias** para generar borr
 
 ---
 
-## 📌 Descripción
+## Descripción
 
 **CobraSmart** es una solución diseñada para transformar procesos manuales en flujos automatizados utilizando herramientas del ecosistema Google.
 
@@ -13,7 +13,7 @@ Fue desarrollado e implementado en un entorno laboral real, permitiendo mejorar 
 
 ---
 
-## 🎯 Problema
+## Problema
 
 El proceso original presentaba:
 
@@ -25,7 +25,7 @@ El proceso original presentaba:
 
 ---
 
-## 💡 Solución
+## Solución
 
 Se desarrolló una **Web App centralizada** que permite:
 
@@ -37,20 +37,20 @@ Se desarrolló una **Web App centralizada** que permite:
 
 ---
 
-## ⚙️ Funcionalidades principales
+## Funcionalidades principales
 
-- 📧 Generación automática de borradores  
-- 📊 Integración con Google Sheets  
-- 🔄 Sistema de estados (`PENDIENTE`, `BORRADOR CREADO`, `ERROR`)  
-- 🧠 Plantillas dinámicas  
-- 🔐 Control de licencias  
-- 🚫 Límite de ejecución  
-- ⚡ Control de concurrencia  
-- 🌐 Interfaz Web App  
+- Generación automática de borradores  
+- Integración con Google Sheets  
+- Sistema de estados (`PENDIENTE`, `BORRADOR CREADO`, `ERROR`)  
+- Plantillas dinámicas  
+- Control de licencias  
+- Límite de ejecución  
+- Control de concurrencia  
+- Interfaz Web App  
 
 ---
 
-## 🧠 Decisiones técnicas
+## Decisiones técnicas
 
 - ocultamiento parcial de datos sensibles (DNI)  
 - variación de asuntos para mejorar entregabilidad  
@@ -60,7 +60,7 @@ Se desarrolló una **Web App centralizada** que permite:
 
 ---
 
-## 📈 Resultados
+## Resultados
 
 - mejora en la entregabilidad de correos  
 - reducción del tiempo operativo  
@@ -69,7 +69,7 @@ Se desarrolló una **Web App centralizada** que permite:
 
 ---
 
-## 🧾 Impacto real
+## Impacto real
 
 Este sistema fue **desarrollado, implementado y utilizado en un entorno laboral real**.
 
@@ -77,7 +77,7 @@ Representa mi primera solución aplicada en producción, con impacto directo en 
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - Google Apps Script (JavaScript)  
 - Google Sheets (SpreadsheetApp)  
@@ -106,20 +106,20 @@ Representa mi primera solución aplicada en producción, con impacto directo en 
 
 ---
 
-## 🖥️ Capturas del sistema
+## Capturas del sistema
 
-### 📊 Google Sheets
+### Google Sheets
 ![Planilla](docs/screenshots/planilla.png)
 
-### 🚀 Web App
+### Web App
 ![WebApp](docs/screenshots/webapp.png)
 
-### 📬 Gmail
+### Gmail
 ![Gmail](docs/screenshots/gmail.png)
 
 ---
 
-## 🔄 Flujo de funcionamiento
+## Flujo de funcionamiento
 
 1. El usuario abre la planilla  
 2. Ejecuta el botón  
@@ -131,7 +131,7 @@ Representa mi primera solución aplicada en producción, con impacto directo en 
 
 ---
 
-## 📚 Aprendizajes
+## Aprendizajes
 
 - resolución de problemas reales  
 - automatización de procesos  
@@ -141,14 +141,13 @@ Representa mi primera solución aplicada en producción, con impacto directo en 
 
 ---
 
-## ⚠️ Nota
+## Nota
 
-Este repositorio contiene una versión adaptada para portfolio.  
-Los datos sensibles fueron reemplazados.
+Este repositorio contiene una versión adaptada para el portfolio.  
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 **Michael Farias**
 
